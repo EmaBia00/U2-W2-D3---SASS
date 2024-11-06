@@ -1,0 +1,62 @@
+@import "./partials/font";
+@import "./partials/reset";
+@import "./partials/colors";
+@import "./partials/buttons";
+@import "./partials/spacings";
+@import "./partials/animations";
+@import "./partials/mixins";
+
+body {
+  color: $gray;
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100px;
+    }
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+          font-size: $size-3;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  //   width: 70%;
+  //   margin-inline: auto;
+  //   margin-block: 20px;
+  display: flex;
+  align-items: center;
+  background-color: $violet;
+  h1 {
+    @include title-big($size-5, "bold");
+  }
+  img {
+    object-fit: contain;
+  }
+}
+
+.grid-content {
+  display: flex;
+  justify-content: space-between;
+  .image-container {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

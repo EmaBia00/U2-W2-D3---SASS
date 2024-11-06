@@ -1,0 +1,13 @@
+@each $key, $value in $buttons {
+  .btn-#{$key} {
+    font-size: 20px;
+    background-color: $value;
+    border: 2px solid $value;
+    border-radius: 10px;
+    padding: 5px;
+    &:hover {
+      box-shadow: 0 2px 10px grey;
+      cursor: pointer;
+    }
+  }
+}
